@@ -1,0 +1,11 @@
+Alien->working in virtual world
+
+Rest ApI -> Http -> Get, Post , Patch ,Delete
+Mongodb 
+
+GET: http://localhost:9000/aliens
+GET: http://localhost:9000/aliens/<id>
+POST: http://localhost:9000/aliens
+PATCH: http://localhost:9000/aliens/<id>
+
+
