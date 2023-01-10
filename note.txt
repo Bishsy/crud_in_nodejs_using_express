@@ -8,4 +8,6 @@ GET: http://localhost:9000/aliens/<id>
 POST: http://localhost:9000/aliens
 PATCH: http://localhost:9000/aliens/<id>
 
-
+M=> Schema
+V =>UI
+C => Router

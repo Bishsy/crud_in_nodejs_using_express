@@ -1,0 +1,45 @@
+const express = require('express')
+const  router = express.Router()
+
+const Alien = require('../models/alien')
+
+router.get('/' , async(req,res)=>{
+    // router code here
+    // res.send('Get Request')
+    // console.log('Get request')
+
+    try{
+
+        const aliens = await Alien.find()
+        res.json(aliens)
+    }
+    catch(err)
+    {
+        res.send('Error'+ err)
+    }
+})
+
+
+router.post('/', async(req , res)=>{
+    
+const alien = new Alien(
+    {
+        name : req.body.name,
+        tech : req.body.tech,
+        sub : req.body.sub
+    })
+    try{
+  
+  const a1 = await alien.save()
+  res.json(a1)
+    }
+    catch(err)
+    {
+        res.send('Error')
+    }
+}
+)
+
+
+
+module.exports  = router
